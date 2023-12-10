@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "author": "NhatTayNguyen - newbie Dev",
-  "description": "https://youtube.com/@trungquandev",
+  "description": "trello api",
   "engines": {
     "node": "18.16.0"
   },
