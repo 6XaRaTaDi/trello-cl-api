@@ -8,7 +8,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     requireConfigFile: false,
-    allowImportExportEverywhere: true
+    allowImportExportEverywhere: true //import export every where
   },
   plugins: [],
   rules: {
