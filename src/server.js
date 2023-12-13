@@ -4,11 +4,13 @@ import { CONNECT_DB, GET_DB, CLOSE_DB } from './config/mongodb'
 import exitHook from 'async-exit-hook'
 import { env } from '~/config/environment'
 import { APIs_v1 } from '~/routes/v1/index'
+import { errorHandlingMiddleware } from '~/middlewares/errorHandlingMiddlewares'
 
 const START_SERVER = () => {
   const app = express()
 
   app.use(express.json())
+  app.use(errorHandlingMiddleware)
   app.use('/api', APIs_v1)
 
   app.listen(env.APP_PORT, env.APP_HOST, () => {
