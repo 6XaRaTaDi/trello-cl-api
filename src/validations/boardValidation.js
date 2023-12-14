@@ -10,7 +10,9 @@ const createBoard = async (req, res, next) => {
   try {
     await createBoardSchema.validateAsync(req.body, { abortEarly: false })
     next()
-  } catch (err) { next(new ApiError(err.statusCode, new Error(err).message)) }
+  } catch (err) {
+    next(new ApiError(err.statusCode, new Error(err).message))
+  }
 }
 
 export const boardValidation = {

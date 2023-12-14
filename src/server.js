@@ -10,8 +10,8 @@ const START_SERVER = () => {
   const app = express()
 
   app.use(express.json())
-  app.use(errorHandlingMiddleware)
   app.use('/api', APIs_v1)
+  app.use(errorHandlingMiddleware) // use after api
 
   app.listen(env.APP_PORT, env.APP_HOST, () => {
     console.log(`Server running at ${ env.APP_HOST }:${ env.APP_PORT }/`)
