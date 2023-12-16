@@ -11,4 +11,8 @@ BoardRoutes.route('/')
   })
   .post(boardValidation.createBoard, boardController.createBoard)
 
+BoardRoutes.route('/:id')
+  .get(boardController.getDetails)
+  // .put(boardValidation.updateBoard, )
+
 export default BoardRoutes
